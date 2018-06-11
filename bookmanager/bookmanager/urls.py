@@ -26,7 +26,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     #不匹配：如果没有符合条件的就是404
 
-    #添加一条匹配正则，不是admin/都转到book应用里面去
+    #添加一条匹配正则，不是admin/都转到book应用里面的urls去
     url(r'^', include('book.urls'))
 
 ]
