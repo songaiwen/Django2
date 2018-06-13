@@ -11,11 +11,5 @@
       <user-name>root</user-name>
       <resolve-scope>:</resolve-scope>
     </data-source>
-    <data-source name="db.sqlite3" uuid="c3378e2d-3117-46b5-91f4-c636b6fbb00c">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
-      <secret-storage>master_key</secret-storage>
-      <auth-required>false</auth-required>
-      <first-sync>true</first-sync>
-    </data-source>
   </component>
 </project>
