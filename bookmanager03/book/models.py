@@ -14,6 +14,10 @@ class BookInfo(models.Model):
         db_table = 'bookinfo'  # 指明数据库表名
         verbose_name = '图书'  # 在admin站点中显示的名称
 
+    def title(self):
+        return '<<' + self.name + '>>'
+    title.short_description = '书名'
+    title.admin_order_field = 'name'
     def __str__(self):
         """定义每个数据对象的显示信息"""
         return self.name
@@ -33,6 +37,7 @@ class PeopleInfo(models.Model):
     class Meta:
         db_table = 'peopleinfo'
         verbose_name = '人物信息'
+        verbose_name_plural = verbose_name
 
     def __str__(self):
         return self.name
