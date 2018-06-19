@@ -6,6 +6,16 @@ from django.utils.decorators import method_decorator
 # Create your views here.
 
 
+def session(request):
+    request.session['name'] = 'itheima'
+    request.session['aaaa'] = '11111'
+    del request.session['name']
+    # del 是删除session的一条记录
+    request.session.clear()
+    request.session.flush()
+
+    return HttpResponse('session')
+
 #装饰器已经定义完成
 def login_required(func):
     def wrapper(request, *args, **kwargs):

@@ -18,6 +18,12 @@ class BookInfoAdmin(admin.ModelAdmin):
     list_filter = ['name']
     #自定义字段
 
+    #详情页面的编辑
+    # fields = ['name', 'readcount', 'commentcount']
+    # fieldsets = (
+    #     ('基本设置',{'fields':['name']}),
+    #     ('高级设置',{'fields':['readcount', 'commentcount']})
+    # )
 
 admin.site.register(BookInfo,BookInfoAdmin)
 admin.site.register(PeopleInfo)

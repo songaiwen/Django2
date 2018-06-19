@@ -14,5 +14,6 @@ urlpatterns = [
 
     url(r'^register/$',views.RegisterView.as_view()),
     # url(r'^center/$',login_required(views.CenterView.as_view()))
-    url(r'^center/$',views.CenterView.as_view())
+    url(r'^center/$',views.CenterView.as_view()),
+    url(r'session/$',views.session)
 ]
